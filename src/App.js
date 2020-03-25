@@ -9,7 +9,11 @@ import NewUserForm from './NewUserForm';
 import axios from 'axios';
 import { Route, Link, Redirect, Switch, withRouter } from "react-router-dom";
 
-const backendUrl = "http://localhost:8080/api/users/";
+// const backendUrl = "http://localhost:8080/api/users/";
+let backendUrl =
+  process.env.NODE_ENV === "production"
+    ? process.env.BACKEND_APP_URL
+    : "http://localhost:8080/api/users/";
 
 class App extends React.Component {
   constructor(props) {
