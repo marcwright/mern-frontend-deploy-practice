@@ -10,7 +10,7 @@ const UserDetail = props => {
     
   userDetail.todos.forEach(todo => {
     let todoComponent = (
-      <Todo todo={todo} userId={userDetail._id} toggleDone={props.toggleDone} />
+      <Todo key={todo._id} todo={todo} userId={userDetail._id} toggleDone={props.toggleDone} />
     );
 
     todo.done 
