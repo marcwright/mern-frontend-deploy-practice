@@ -15,7 +15,8 @@ import { Route, Link, Redirect, Switch, withRouter } from "react-router-dom";
 //     ? process.env.BACKEND_APP_URL
 //     : "http://localhost:8080/api/users/";
 
-let backendUrl = process.env.BACKEND_APP_URL || "http://localhost:8080/api/users/";
+let backendUrl =
+  process.env.REACT_APP_BACKEND_APP_URL || "http://localhost:8080/api/users/";
 
 class App extends React.Component {
   constructor(props) {
